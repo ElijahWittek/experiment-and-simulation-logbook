@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Heat diffusion test run",
+        "created_date": "2026-09-14",
+        "parameters": {
+            "grid_size": "100 x 100",
+            "time_step": "0.01 s",
+            "iterations": "1000"
+        },
+        "status": "open",
+        "result_summary": "",
+        "data_file": "data/heat_diffusion_input.csv",
+        "notes": "Initial test with default boundary conditions."
+    },
+    {
+        "id": 2,
+        "title": "Particle movement simulation",
+        "created_date": "2026-09-15",
+        "parameters": {
+            "particles": "500",
+            "duration": "60 s",
+            "method": "Euler"
+        },
+        "status": "completed",
+        "result_summary": "Simulation completed without runtime errors.",
+        "data_file": "",
+        "notes": "Used as a completed example entry."
+    }
+]

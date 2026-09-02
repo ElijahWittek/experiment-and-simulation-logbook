@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+
+# Editor files
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local runtime data
+data/logbook.json
+
+# Generated output files
+output/*
