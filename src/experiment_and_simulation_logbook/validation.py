@@ -26,6 +26,15 @@ def validate_title(title: str) -> str:
 
     return cleaned_title
 
+def validate_search_term(search_term: str) -> str:
+    """Validate and clean a title search term."""
+    cleaned_search_term = search_term.strip()
+
+    if not cleaned_search_term:
+        raise ValueError("Search term must not be empty.")
+
+    return cleaned_search_term
+
 def validate_parameters(
         parameters: list[tuple[str, str]],
 ) -> dict[str, str]:

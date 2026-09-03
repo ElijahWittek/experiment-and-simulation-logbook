@@ -5,6 +5,7 @@ from experiment_and_simulation_logbook.validation import (
     validate_id_input,
     validate_logbook_data,
     validate_parameters,
+    validate_search_term,
     validate_status,
     validate_title,
 )
@@ -31,6 +32,17 @@ def test_validate_parameters_returns_cleaned_parameters():
         "grid_size": "100 x 100",
         "time_step": "0.01 s",
     }
+
+def test_validate_search_term_returns_cleaned_search_term():
+    assert validate_search_term("  heat  ") == "heat"
+
+
+def test_validate_search_term_rejects_empty_search_term():
+    with pytest.raises(
+        ValueError,
+        match="Search term must not be empty",
+    ):
+        validate_search_term("   ")
 
 def test_validate_parameters_allows_empty_parameter_list():
     assert validate_parameters([]) == {}
